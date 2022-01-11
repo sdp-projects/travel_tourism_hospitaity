@@ -1,0 +1,294 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>Tours</title>
+  
+  
+  
+  
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
+}
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <h1 class="main-title">Best places in Mumbai</h1>
+
+<div class="container">
+  <h3 class="title">The Gateway of India</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/wpimages/2019/08/india-mumbai-top-attractions-visit-gateway-to-india.jpg">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">The Gateway of India</h3>
+        <p class="content-text">Standing proud on the banks of the Arabian Sea at the Apollo Bunder waterfront area, the Gateway of India is one of Mumbai's most popular and treasured landmarks. The 26-meter basalt archway, which combines the architectural styles of Roman triumphal arches with traditional Hindu and Muslim designs, was built as a gesture of welcoming for King George V and Queen Mary when they visited British India in 1911. Ironically, it was under this very archway that the last British troops exited India in 1948, after the country declared its independence from Great Britain.
+Nowadays, the Gateway of India is one of the most popular gathering spots in Mumbai for tourists and locals alike. Watch the yachts and ferries take off to sea from the five jetties that flank the arch.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Marine Drive</h3>
+  <div class="content">
+<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://en-media.thebetterindia.com/uploads/2015/12/md_f.png">
+      <div class="content-details fadeIn-top">
+        <h3>Marine Drive</h3>
+        <p>No trip to Mumbai would be complete without a cruise down Marine Drive. The 3.6-kilometer-long, C-shaped boulevard offers epic views of the coast. However, just as amazing are the sightseeing opportunities on the other side of Marine Drive. The street is lined with stunning Art Deco buildings that have earned status as a UNESCO World Heritage site.
+After your mini road trip, head out on foot for some more sightseeing along the Marine Drive promenade. The best time to go is at sunset. That's when tourists and Mumbaikars gather on the sands of Girgaum Chowpatty to see the cotton candy skies fade to dark while noshing on Mumbai's famous street food from nearby stalls.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Bandra-Worli Sea Link</h3>
+  <div class="content">
+<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/wpimages/2019/08/india-mumbai-top-attractions-bandra-worli-sea-link.jpg">
+      <div class="content-details fadeIn-top">
+        <h3>Bandra-Worli Sea Link</h3>
+        <p>One of Mumbai's most iconic sites is a cable-stayed bridge known as the Bandra-Worli Sea Link. Opened in 2009, the eight-lane bridge connects the central business district with the western suburbs over the open sea, offering some much-needed relief from the congestion on the Mahim Causeway. It has become the Mumbai equivalent of New York's Brooklyn Bridge or Sydney's Opera House.
+
+For the most impressive views of the Bandra-Worli Sea Link, head to the Bandra Fort, a historic watchtower built by the Portuguese in 1640. It's also worth driving across the bridge, as well. By day, you can see the crashing sea on both sides of the bridge. And at night, watch the bridge light up with spectacular colors.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<div class="container">
+  <h3 class="title">The Taj Mahal Palace, Mumbai</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/360px-Mumbai_Aug_2018_%2843397784544%29.jpg">
+      <div class="content-details fadeIn-right">
+        <h3>The Taj Mahal Palace, Mumbai</h3>
+        <p>Tourists can find another popular site right near the Gateway of India: The Taj Mahal Palace, Mumbai and Tower. More than a century old, India's first luxury hotel is revered for the grandeur of its brownstone exterior. The windowed facade infuses its Renaissance architecture with Islamic touches, like corner turrets topped with onion domes, pointed archways, and covered balconies.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Kanheri Cave</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/wpimages/2019/08/india-mumbai-top-attractions-kanheri-caves.jpg">
+      <div class="content-details fadeIn-top fadeIn-left">
+        <h3>Kanheri Cave</h3>
+        <p>While Mumbai may look like a shiny, modern city at first glance, it also has some ancient sites that will leave you in awe. Spend a day at Sanjay Gandhi National Park exploring the Kanheri Caves, a complex of monuments that were carved out of the basalt formations around 2,000 years ago. Inside the 109 cave entrances, you'll see large stupas (a hint that this was once a sacred place for Buddhists), congregation areas, and prayer halls. Look for the incomplete paintings of the Buddha on the ceiling of cave 34.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">The Chhatrapati Shivaji Maharaj Vastu Sangrahalaya Museum</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/wpimages/2019/08/india-mumbai-top-attractions-chhatrapati-shivaji-maharaj-vastu-sangrahalaya-museum.jpg">
+      <div class="content-details fadeIn-top fadeIn-right">
+        <h3>The Chhatrapati Shivaji Maharaj Vastu Sangrahalaya Museum</h3>
+        <p>Visiting the Chhatrapati Shivaji Maharaj Vastu Sangrahalaya Museum is also high on the list of the top things to do for tourists in Mumbai. Previously known as the Prince of Wales Museum of Western India, this is one of India's most important art and history attractions.
+You'll need at least a full day to take in the museum's expansive permanent collection of 70,000 items, which include Indian miniature paintings, Himalayan art, antique Asian coins, jeweled swords, and much more. Afterward, poke around the streets of the Fort neighborhood near the museum—they're filled with stunning Gothic buildings.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">The Global Vipassana Pagoda</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/wpimages/2019/08/india-mumbai-top-attractions-global-vipassana-pagoda.jpg">
+      <div class="content-details fadeIn-bottom fadeIn-left">
+        <h3> The Global Vipassana Pagoda</h3>
+        <p>Discover Mumbai's peaceful, quiet side at the Global Vipassana Pagoda. Inspired by Myanmar's Shwedagon Pagoda, the colossal 96-meter-high stupa is covered in real gold that gleams in the sun. The hollow pagoda features a massive hall with room for 8,000 people to meditate in tranquility together.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Shree Siddhivinayak Temple</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/wpimages/2019/08/india-mumbai-top-attractions-shree-siddhivinayak-temple.jpg">
+      <div class="content-details fadeIn-bottom fadeIn-right">
+        <h3>Shree Siddhivinayak Temple</h3>
+        <p>Many Hindus have their favorites of the religion's 33 million gods. Devotees who favor Ganesha (the potbellied deity with the elephant head who is known as the "remover of obstacles") make pilgrimages to the Shree Siddhivinayak Temple.
+Slip off your shoes and head in to see the idol of the deity, draped with marigold garlands and offerings, with hundreds of other visitors eager for a glimpse (and perhaps a granted wish). It's a cultural experience like none other. And if you're interested in other sacred places dedicated to Ganesha, check out the Vazira Naka Ganpati temple and the Garodia Nagar Ganpati temple.</p>
+      </div>
+    </a>
+  </div>
+</div>
+  
+  
+  
+  
+
+
+
+
+ 
+</body></html>

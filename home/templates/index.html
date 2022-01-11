@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Index Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="{% static 'index/style.css' %}">
+
+</head>
+<body>
+
+<a style="position: absolute; right: 0;" href="http://127.0.0.1:8000/logout"><button class="btn">Logout</button></a>
+<br><br><br><br>
+<h1 style="font-size:30px; color:red">Welcome, {{user.username}}</h1>
+<!-- partial:index.partial.html -->
+<main class="page-content">
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Travel Destinations</h2>
+      <p class="copy">Planning a surprise vacation for your family any time soon? Well, these best family holiday destinations in India should surely be on top of your list!</p>
+      <a href="main/"><button class="btn">Book now</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Hotels</h2>
+      <p class="copy">Discover special hotels in unique destinations all over india</p>
+      <a href="home1/"><button class="btn">Book now</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Tour Guides</h2>
+      <p class="copy">Discover the best of your next destination on a walking tour with a local expert guide.</p>
+      <a href="home2/"><button class="btn">Book now</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Security Guide</h2>
+      <p class="copy">Hire a security guard to ensure a security</p>
+      <a href="home3/"><button class="btn">Book now</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Flights</h2>
+      <p class="copy">Book Domestic Flight Tickets easily with Take a Trip</p>
+      <a href="flights/"><button class="btn">Book now</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Trains</h2>
+      <p class="copy">We will help you search all available trains for your destination</p>
+      <a href="trains/"><button class="btn">Book now</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Cars</h2>
+      <p class="copy">Put the frustration and agony of getting a ride when you want behind you by making your car booking with Take a Trip going forward.</p>
+      <a href="cars/"><button class="btn">Book now</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">ChatBot</h2>
+      <p class="copy">Get suggestions based on your area of interest</p>
+      <a href="http://127.0.0.1:8000/bot/"><button class="btn">Explore</button></a>
+    </div>
+  </div>
+
+  </div>
+</main>
+</body>
+</html>

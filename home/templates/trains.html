@@ -1,0 +1,803 @@
+{% load static %}
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="icon image">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>Train ticket booking</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+html,
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  font: 16px 'Roboto', sans-serif;
+  width: 100%;
+  text-align: center;
+  color: #555;
+  background: #ddd;
+  background-image: url('https://images.unsplash.com/photo-1503776470087-3569342b4a2e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+.form {
+  padding: 35px 0;
+  border: 1px solid #aaa;
+  background: #eee;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: ;
+}
+
+.select {
+  width: 100%;
+  height:100%;
+  padding: 10px 10px 12px 70px;
+  font-size: 12px;
+  color: #555;
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
+
+input[type=text] {
+  width: 80%;
+  padding: 10px 10px 12px 70px;
+  font-size: 12px;
+  color: #555;
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
+
+.field {
+  display: inline-block;
+  position: relative;
+  /*margin: 15px 5px 0 0;*/
+  margin: 10px auto;
+}
+
+.col-centered {
+  float: none;
+}
+
+.field input {
+  transition: .1s all linear;
+  font-size: 20px;
+  font-family: Monospace;
+}
+
+.field label {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 18%;
+  top: 18px;
+}
+
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 2em;
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  color: #131313;
+  background-color: #e7e5e4;
+  letter-spacing: .07em;
+  text-shadow: 1px -1px 0 #767676;
+  margin-top: 10px;
+}
+
+#page1,#page2,#invis {
+  /*display : none;*/
+}
+
+/*********************** page 2 *********/
+
+caption{
+
+font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 25px;
+  padding: 20px 5px;
+  text-align: center;
+  text-transform: uppercase;
+/*  text-rendering: optimizeLegibility;*/
+
+   color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .2em;
+  text-shadow: 1px -1px 0 #767676;
+  margin-top:10px;
+}
+
+
+#trainClass {
+    margin:4px;
+
+    /*float:left;*/
+  float:center;
+
+}
+
+#trainClass label {
+
+    width:60px;
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+       cursor:pointer;
+}
+
+#trainClass label span {
+    text-align:center;
+    font-size: 25px;
+    padding:13px 0px;
+    display:inline-block;
+  width:100%;
+
+}
+
+#trainClass label input {
+    position:absolute;
+    top:-20px;
+  opacity: 0;/**hides the radio button**/
+}
+
+#trainClass input:checked + span {
+    background-color:#404040;
+    color:#F7F7F7;
+}
+
+#trainClass .yellow {
+    background-color:#FFCC00;
+    color:#333;
+}
+
+#trainClass .blue {
+    background-color:#00BFFF;
+    color:#333;
+}
+
+#trainClass .pink {
+    background-color:#FF99FF;
+    color:#333;
+}
+
+#trainClass .green {
+    background-color:#A3D900;
+    color:#333;
+}
+#trainClass .purple {
+    background-color:#B399FF;
+    color:#333;
+}
+
+#bfoot{
+  position:relative;
+  top:30px;
+}
+/*********************************************************************/
+
+
+/*********************table row select ******/
+
+.member tr:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgba(41, 103, 182, 0.89);
+  color: #FFF;
+}
+
+.table th {
+  text-align: center;
+}
+
+/*********************class select***********************/
+#selectclass{
+
+  position:absolute;
+  /*top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;*/
+  left: 20%;
+width: 60%;
+  height:60%;
+  top:20%;
+  /*transform: translate(-50%, -50%);            or use this for above two lines*/
+
+  z-index:10;
+  color:brown;
+  background-color:white;
+}
+.invis{
+  width:100%;
+  height:100%;
+ position:absolute;
+  top:0;
+  left:0;
+  z-index:0.5;
+  background-color:rgba(0, 0, 0, 0.2);
+  min-width:370px;
+}
+#selectclass > h2{
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 25px;
+  padding: 20px 5px;
+  text-align: center;
+  text-transform: uppercase;
+/*  text-rendering: optimizeLegibility;*/
+
+   color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .2em;
+  text-shadow: 1px -1px 0 #767676;
+  margin-top:10px;
+}
+/**************   ticket  ********/
+
+#ticket{
+  width:500px;
+  height:250px;
+  border : 1px solid black;
+  text-transform: uppercase;
+  margin:50px auto;
+  background:white;
+  font-family: "Times New Roman", Times, serif;
+
+
+}
+
+
+
+.pull-right{
+  padding:15px;
+  text-align:right;
+  right:10px;
+  font-size:15px;
+}
+.pull-left{
+  text-align:left;
+ left:10px;
+  font-size:15px;
+  padding: 15px;
+}
+.trainno{
+  font-size:60px;
+  padding:15px;
+   font-family: monospace;
+}
+.trainname{
+  font-size:22px;
+
+  font-family:Verdana, Geneva, sans-serif;
+  padding: 10px 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.from{
+
+
+   font-family:Verdana, Geneva, sans-serif;
+  padding: 50px 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.to{
+
+  font-family:Verdana, Geneva, sans-serif;
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#barcodes{
+  width:80%;
+  font-size:25px;
+
+}
+table {
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+td {
+
+  width: 4px;
+ height: 30px;
+}
+
+.compartment{
+  font-size:25px;
+  padding:10px;
+}
+.seatno{
+  font-size:25px;
+  padding:10px;
+}
+
+
+.final > h2{
+ font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 25px;
+  padding: 20px 5px;
+  text-align: center;
+  text-transform: uppercase;
+/*  text-rendering: optimizeLegibility;*/
+
+   color: #e0dfdc;
+  background-color: #333;
+  letter-spacing: .2em;
+  text-shadow: 1px -1px 0 #767676;
+  margin-top:10px;
+}
+/* CodePen demo */
+
+
+.big {
+  font-size: 1.4em;
+}
+
+.square {
+  width: .7em;
+  height: .7em;
+  margin: .5em;
+  display: inline-block;
+}
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+
+.custom-dropdown select {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.5em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.custom-dropdown::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.4);
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div class="index container animated zoomIn">
+
+  <div class="form contactform">
+    <div id="page1">
+      <h1>Book Your Train Ticket</h1>
+      <div class="index row">
+
+        <div class="field col-sm-6">
+        <label>From:</label>
+    <select id="from" class="custom-dropdown big ui-autocomplete-input" autocomplete="off">
+        <option>Select..</option>
+        <option>Pune</option>
+        <option>Bangalore</option>
+        <option>Chennai</option>
+        <option>Hyderabad</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+    </select>
+        </div>
+
+        <div class="field col-sm-6">
+          <label for="to">To :</label>
+         <select id="to" class="custom-dropdown big ui-autocomplete-input" autocomplete="off">
+        <option>Select...</option>
+        <option>Pune</option>
+        <option>Bangalore</option>
+        <option>Chennai</option>
+        <option>Hyderabad</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+    </select>
+        </div>
+
+
+        <div class="field col-sm-6 col-centered">
+          <label for="datepicker">Date</label>
+          <input id="datepicker" type="date" class="hasDatepicker">
+        </div>
+        <div class="clearfix visible-xs"></div>
+        <div class="field col-sm-6 col-centered ">
+          <div id="search" class="btn  btn-primary">Search for Trains</div>
+        </div>
+      </div>
+    </div>
+    <div id="page2" class="animated zoomInDown" style="display: none;">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="table-responsive  text-center">
+            <table class="table table-bordered table-hover">
+              <caption class="text-center">Available Trains : </caption>
+              <thead>
+                <tr>
+                  <th> Train No</th>
+                  <th>Train Name</th>
+                  <th>Time</th>
+                  <th>Cost</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <td colspan="100%"><span class="btn btn-danger book">Book Now</span></td>
+                </tr>
+              </tfoot>
+              <tbody class="member">
+                <tr>
+                  <td class="tnum">78654</td>
+                  <td id="trainname1" class="tnam"></td>
+                  <td class="ttime">04:30 AM</td>
+                  <td class="tcost">₹ 200</td>
+                </tr>
+                <tr>
+                  <td class="tnum">54876</td>
+                  <td id="trainname2" class="tnam"></td>
+                  <td class="ttime">10:15 AM</td>
+                  <td class="tcost">₹ 250</td>
+                </tr>
+                <tr>
+                  <td class="tnum">25312</td>
+                  <td id="trainname3" class="tnam"></td>
+                  <td class="ttime">15:50 PM</td>
+                  <td class="tcost">₹ 300</td>
+                </tr>
+                <tr>
+                  <td class="tnum">45698</td>
+                  <td id="trainname4" class="tnam"></td>
+                  <td class="ttime">21:30 PM</td>
+
+                  <td class="tcost">₹350</td>
+                </tr>
+                <tr>
+                  <td class="tnum">95464</td>
+                  <td id="trainname5" class="tnam"></td>
+                  <td class="ttime">23:15 PM</td>
+
+                  <td class="tcost">₹ 500</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
+          <!--end of .table-responsive-->
+        </div>
+      </div>
+
+
+    </div>
+    <!-----page2------>
+    <div id="invis" class="animated fadeInUpBig invis" style="display: none;">
+      <div id="selectclass">
+        <h2>Select your class :</h2>
+        <div id="trainClass">
+          <label class="blue"><input type="radio" name="toggle"><span>GEN</span></label>
+          <label class="green"><input type="radio" name="toggle"><span>SL</span></label>
+          <label class="yellow"><input type="radio" name="toggle"><span>AC1</span></label>
+          <label class="pink"><input type="radio" name="toggle"><span>AC2</span></label>
+          <label class="purple"><input type="radio" name="toggle"><span>AC3</span></label>
+        </div>
+        <div id="bfoot">
+          <div class="col-xs-6 ">
+            <span class="btn btn-primary booknow">BOOK NOW</span></div>
+          <div class="col-xs-6 ">
+            <span class="btn btn-danger bookcancel">CANCEL</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------------------------invis over--------------------->
+
+
+  </div>
+</div>
+<!----------------------ticket--------------------->
+<div class="final animated flip" style="display: none;">
+  <h2> Here is Your Ticket</h2>
+  <div class="ticket" id="ticket">
+    <div class="row">
+      <div class="col-xs-6 pull-left" id="date"></div>
+      <div class="col-xs-6 pull-right ">INDIAN RAILWAYS</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 trainno"><span id="number"></span></div>
+      <div class="col-xs-6 trainname"></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 from">From :<span id="From"></span></div>
+      <div class="col-xs-6 to">To :<span id="To"></span></div>
+    </div>
+    <div class="row">
+      <td colspan="100%"><a href="http://127.0.0.1:8000/payment/"><button class="btn btn-danger book">Book Now </button></a></td>
+    </div>
+  </div>
+</div>
+<!------ticket------->
+<!------------------------------------------>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="{% static 'transport/a.js' %}"></script>
+      <script id="rendered-js">
+$(document).ready(function () {
+
+  $(function () {
+    $("#datepicker").datepicker();
+  });
+
+  $(function () {
+    $("#timepicker").timepicker();
+  });
+
+  /***********************************************/
+  var tnum, tnam, ttime, tcost, classname;
+  var from,to,date,availableCities = [
+  "Mumbai",
+  "Pune",
+  "Delhi",
+  "Chennai",
+  "Bangalore",
+  "Hyderabad",];
+
+  $("#from").autocomplete({
+    source: availableCities });
+
+  $("#to").autocomplete({
+    source: availableCities });
+
+
+  /*****hiding initially*****/
+  $(".invis").hide();
+  $("#page2").hide();
+  $(".final").hide();
+  /*********** page 1 to page 2*****/
+
+  $("#search").click(function () {
+    from = $("#from").val();
+    to = $("#to").val();
+    date = $("#datepicker").val();
+    if (!(from && to && date)) {
+      alert("Please Select All Fields !");
+      return False;
+    } else
+    if (from == to)
+    {
+      alert("From and To can't be same");
+      return False;
+    }
+    $("#page1").hide();
+    $("#page2").show();
+
+    $("#trainname1").html(from + " Express");
+    $("#trainname2").html(to + " Express");
+    $("#trainname3").html(from + " Passenger");
+    $("#trainname4").html(to + " Passenger");
+    $("#trainname5").html(from + " - " + to + " Super Fast Train");
+
+    /***********tableselector************************/
+
+    $("tbody > tr").mouseover(function () {
+      $(this).css("backgroundColor", "rgba(41, 103, 182, 0.89)");
+
+    }).mouseout(function () {
+      $(this).css("backgroundColor", "");
+    });
+
+    $("tbody > tr").click(function () {
+      $(this).parent().children().removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+    /*******************************************************************/
+
+    /*********************book now ********************/
+
+
+    $(".book").click(function () {
+      tcost = $(".selected").find(".tcost") // Gets a descendent with class="tcost"
+      .text(); // Retrieves the text within <td>
+      tnum = $(".selected").find(".tnum").text();
+
+      tnam = $(".selected").find(".tnam").text();
+
+      ttime = $(".selected").find(".ttime").text();
+      /* alert(tnum);*/
+      if (!tnum) {
+        alert("Please Select Your Train !");
+        return False;
+      }
+      $(".invis").show();
+
+
+      /***************** booknow ************/
+
+      $(".booknow").click(function () {
+        classname = document.querySelector('input[name="toggle"]:checked+span').innerHTML;
+
+        $(".invis").hide(function () {
+          $("#page2").hide();
+        });
+        $(".index").hide();
+        $(".final").show();
+
+      });
+      $(".bookcancel").click(function () {
+
+        $(".invis").hide();
+      });
+      /***************************booknow over*****************/
+      /******************ticket*************************/
+      $("#From").html(from);
+      $("#To").html(to);
+      $(".trainname").html(tnam);
+      $("#number").html(tnum);
+
+      var d = new Date();
+      var n = d.toLocaleDateString();
+      document.getElementById("date").innerHTML = n;
+
+
+
+      /***********************************************************/
+
+      /********barcode*************/
+      var code = '1101001000010011101100101110111101101000111010111001100110111001001011110111011100101100100100001101100011101011';
+
+      table = $('#barcodes tr');
+      for (var i = 0; i < code.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+        if (code[i] == 1) {
+          table.append('<td bgcolor="black">');
+        } else {
+          table.append('<td bgcolor="white">');
+        }
+      }
+      /***************************/window.CP.exitedLoop(0);
+    });
+    /***********************************************/
+
+
+
+
+    /***********end***********/
+  });
+
+  /*****************page2**************************************************/
+
+  /* $("#page").ready(function(){
+     var from = $("#from").val();
+     $("#trainname1").html(from + " Express");
+   })
+   
+   */
+
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-2" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-2" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-2" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>

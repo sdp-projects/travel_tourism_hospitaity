@@ -1,0 +1,811 @@
+<html lang="en" class=""><head>
+
+  <meta charset="UTF-8">
+  <title>Hotels</title>
+
+  <meta name="robots" content="noindex">
+
+  
+<link rel="stylesheet" href="https://qaone.switchfly.com/resources/shopping/.build/css/qaone/fallback-theme.base-blessed1.css">
+
+  <style class="INLINE_PEN_STYLESHEET_ID">
+    .points-toggle-large button {
+  width: 50%;
+}
+
+.points-toggle .icon {
+  display: none;
+}
+.points-toggle .active .icon {
+  display: inline-block;
+}
+.points-toggle .active .title {
+  font-weight: bold;
+}
+.points-toggle .active:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #1b6ec2;
+  border-width: 10px;
+  margin-left: -10px;
+}
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  <main id="shopping-page-container" tabindex="-1" class="container page-content automation-page-header"> 
+    <div class="page-header container">
+<!---->        <div class="row">
+            <!---->
+        </div>
+    </div>
+
+    <div class="page-body ">
+        <div class="page-header">
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+    <div class="col-sm-12">
+            <div id="ember2488" class="ember-view">
+
+    <div id="modify-search-modal" class="ember-view"><div tabindex="-1" role="document" data-keyboard="true" data-backdrop="true" style="display: none;" class="modal fade  automation-modifySearchModal" aria-labelledby="modify-search-modal-header" aria-describedby="modify-search-modal-body">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <button class="close automation-closeXBtn" data-ember-action="2496">
+                            <i aria-hidden="true" class="icon icon-modal--close"></i>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    <h1 class="modal-title h3 automation-modalTitle" id="modify-search-modal-header">
+                        Modify Search
+                    </h1>
+                </div>
+            <div class="modal-body automation-modalBody" id="modify-search-modal-body">
+                        <div class="no-margin automation-newSearch">
+        <span id="ember2503" class="ember-view">Edit your existing search or perform a <button type="button" class="ember-view btn btn-link">New Search</button>.</span>
+    </div>
+    <form id="ember2513" class="ember-view js-search-form form-under-validation"><!---->
+
+    <div class="row">
+        <div class="col-xs-12 automation-destination">
+            <label id="room-destination" for="destinationInput">
+                Destination
+
+                <span class="sr-only">Please enter a minimum of 3 characters of the location name, then use up and down arrow keys to navigate and enter key to select an option.</span>
+
+                    <div class="error-text-container"></div>
+                    <div class="icon-inline">
+                        <div id="ember2515" class="ember-view">    <div id="ember2516" class="basic-typeahead destination-input"><span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input id="destinationInput" placeholder="City or airport code" type="text" data-validate="destinationValid required" data-validate-message="Please select a valid location from the drop down" aria-owns="tt-results-typeahead-ember2516" aria-autocomplete="list" class="basic-typeahead-input automation-basic-typeahead-input ember-view ember-text-field basic-typeahead-input automation-basic-typeahead-input tt-input" autocomplete="off" spellcheck="false" style="position: relative; vertical-align: top;" dir="auto" aria-invalid="false"><pre aria-hidden="true" style="display: none; position: absolute; visibility: hidden; white-space: pre; font-family: BentonSans-Bk, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div id="tt-results-typeahead-ember2516" class="tt-dataset"></div></span></span>
+</div>
+</div>
+                        <i aria-hidden="true" class="icon icon-search-form__location--destination"></i>
+                    </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="ember2517" class="ember-view"><div class="input-daterange">
+        <div class="">
+            <div class="col-xs-6">
+                <label class="icon-inline">
+                    <span id="departure-date">Checkin</span>
+                    <div class="error-text-container"></div>
+                    <div class="input-group">
+                        <input id="date-range-start" placeholder="DD/MM/YY" type="tel" data-validate="searchFormDates required" data-date-format="DD/MM/YY" data-min-valid-date="1" data-max-valid-date="331" aria-required="true" aria-labelledby="departure-date" class="datepicker date-range-start automation-startDate ember-view ember-text-field datepicker date-range-start automation-startDate form-control" aria-autocomplete="none" style="min-width: 7em;">
+                        <i aria-hidden="true" class="icon icon-search-form__date"></i>
+                    </div><div class="datepicker-calendar default" id="datepicker-calendar-date-range-start" style="display: none; left: 0px;" aria-hidden="true" aria-controls="date-range-start">	<div class="datepicker-month-wrap">		<div class="datepicker-month-fast-next pull-right btn btn-link" role="button" aria-labelledby="datepicker-bn-fast-next-label-date-range-start" tabindex="0"><i class="icon icon-scroll--next-item icon-large"></i></div>		<div class="datepicker-month-next pull-right btn btn-link" role="button" aria-labelledby="datepicker-bn-next-label-date-range-start" tabindex="0"><i class="icon icon-scroll--next-item icon-large"></i></div>		<div class="datepicker-month-fast-prev pull-left btn btn-link" role="button" aria-labelledby="datepicker-bn-fast-prev-label-date-range-start" tabindex="0"><i class="icon icon-scroll--prev-item icon-large"></i></div>		<div class="datepicker-month-prev pull-left btn btn-link" role="button" aria-labelledby="datepicker-bn-prev-label-date-range-start" tabindex="0"><i class="icon icon-scroll--prev-item icon-large"></i></div>		<div id="datepicker-month-date-range-start" class="datepicker-month" tabindex="0" role="heading" aria-live="assertive" aria-atomic="true" title="Click or press the Enter key or the spacebar to change the month">July 2015</div>	</div>	<table class="datepicker-grid" role="grid" aria-readonly="true" aria-activedescendant="datepicker-err-msg-date-range-start" aria-labelledby="datepicker-month-date-range-start" tabindex="0">		<thead>			<tr class="datepicker-weekdays" role="row">				<th class="datepicker-day" role="columnheader"><abbr title="Monday">Mo</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Tuesday">Tu</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Wednesday">We</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Thursday">Th</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Friday">Fr</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Saturday">Sa</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Sunday">Su</abbr></th>			</tr>		</thead>		<tbody>			<tr>				<td id="datepicker-err-msg-date-range-start" colspan="7">JavaScript must be enabled</td>			</tr>		</tbody>	</table>	<div class="datepicker-close-wrap show" aria-hidden="true" style="display: none;">		<button class="btn btn-default btn-block show datepicker-close" id="datepicker-close-date-range-start" aria-labelledby="datepicker-bn-close-label-date-range-start" title="Close the calendar">Close</button>	</div>	<div id="datepicker-bn-open-label-date-range-start" class="datepicker-bn-open-label offscreen">Click or press the Enter key or the spacebar to open the calendar</div>	<div id="datepicker-bn-prev-label-date-range-start" class="datepicker-bn-prev-label offscreen">Go to previous month</div>	<div id="datepicker-bn-next-label-date-range-start" class="datepicker-bn-next-label offscreen">Go to next month</div>	<div id="datepicker-bn-fast-prev-label-date-range-start" class="datepicker-bn-fast-prev-label offscreen">Go to previous year</div>	<div id="datepicker-bn-fast-next-label-date-range-start" class="datepicker-bn-fast-next-label offscreen">Go to next year</div>	<div id="datepicker-bn-close-label-date-range-start" class="datepicker-bn-close-label offscreen" aria-hidden="true" style="display: none;">Close the date picker</div></div>
+                </label>
+            </div>
+
+<!---->        </div>
+
+        <div class="">
+            <div class="col-xs-6">
+                <label class="icon-inline">
+                    <span id="arrival-date">Checkout</span>
+                    <div class="error-text-container"></div>
+                    <div class="input-group">
+                        <input id="date-range-end" placeholder="DD/MM/YY" type="tel" data-validate="searchFormDates required" data-date-format="DD/MM/YY" data-min-valid-date="1" data-max-valid-date="331" aria-required="true" aria-labelledby="arrival-date" class="datepicker date-range-end automation-endDate ember-view ember-text-field datepicker date-range-end automation-endDate form-control" aria-autocomplete="none" style="min-width: 7em;">
+                        <i aria-hidden="true" class="icon icon-search-form__date"></i>
+                    </div><div class="datepicker-calendar default" id="datepicker-calendar-date-range-end" style="display: none; left: 0px;" aria-hidden="true" aria-controls="date-range-end">	<div class="datepicker-month-wrap">		<div class="datepicker-month-fast-next pull-right btn btn-link" role="button" aria-labelledby="datepicker-bn-fast-next-label-date-range-end" tabindex="0"><i class="icon icon-scroll--next-item icon-large"></i></div>		<div class="datepicker-month-next pull-right btn btn-link" role="button" aria-labelledby="datepicker-bn-next-label-date-range-end" tabindex="0"><i class="icon icon-scroll--next-item icon-large"></i></div>		<div class="datepicker-month-fast-prev pull-left btn btn-link" role="button" aria-labelledby="datepicker-bn-fast-prev-label-date-range-end" tabindex="0"><i class="icon icon-scroll--prev-item icon-large"></i></div>		<div class="datepicker-month-prev pull-left btn btn-link" role="button" aria-labelledby="datepicker-bn-prev-label-date-range-end" tabindex="0"><i class="icon icon-scroll--prev-item icon-large"></i></div>		<div id="datepicker-month-date-range-end" class="datepicker-month" tabindex="0" role="heading" aria-live="assertive" aria-atomic="true" title="Click or press the Enter key or the spacebar to change the month">July 2015</div>	</div>	<table class="datepicker-grid" role="grid" aria-readonly="true" aria-activedescendant="datepicker-err-msg-date-range-end" aria-labelledby="datepicker-month-date-range-end" tabindex="0">		<thead>			<tr class="datepicker-weekdays" role="row">				<th class="datepicker-day" role="columnheader"><abbr title="Monday">Mo</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Tuesday">Tu</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Wednesday">We</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Thursday">Th</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Friday">Fr</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Saturday">Sa</abbr></th>				<th class="datepicker-day" role="columnheader"><abbr title="Sunday">Su</abbr></th>			</tr>		</thead>		<tbody>			<tr>				<td id="datepicker-err-msg-date-range-end" colspan="7">JavaScript must be enabled</td>			</tr>		</tbody>	</table>	<div class="datepicker-close-wrap show" aria-hidden="true" style="display: none;">		<button class="btn btn-default btn-block show datepicker-close" id="datepicker-close-date-range-end" aria-labelledby="datepicker-bn-close-label-date-range-end" title="Close the calendar">Close</button>	</div>	<div id="datepicker-bn-open-label-date-range-end" class="datepicker-bn-open-label offscreen">Click or press the Enter key or the spacebar to open the calendar</div>	<div id="datepicker-bn-prev-label-date-range-end" class="datepicker-bn-prev-label offscreen">Go to previous month</div>	<div id="datepicker-bn-next-label-date-range-end" class="datepicker-bn-next-label offscreen">Go to next month</div>	<div id="datepicker-bn-fast-prev-label-date-range-end" class="datepicker-bn-fast-prev-label offscreen">Go to previous year</div>	<div id="datepicker-bn-fast-next-label-date-range-end" class="datepicker-bn-fast-next-label offscreen">Go to next year</div>	<div id="datepicker-bn-close-label-date-range-end" class="datepicker-bn-close-label offscreen" aria-hidden="true" style="display: none;">Close the date picker</div></div>
+                </label>
+            </div>
+
+<!---->        </div>
+</div>
+</div>
+    </div>
+
+    <div class="row" id="ember2520">
+    <div class="col-xs-12">
+            <div class="automation-travelersLabel">Room and Travelers</div>
+        <div class="icon-inline">
+            <button id="toggleTravelersId" type="button" data-target="#search-form-travelers-selection" data-toggle="collapse" aria-controls="search-form-travelers-selection" aria-expanded="false" class="automation-showHideTravelers collapsed ember-view automation-showHideTravelers collapsed btn btn-text-input"><span class="icon-container"><i aria-hidden="true" class="icon icon-user"></i></span> 1 Adult, 0 Children, 1 Room</button>
+        </div>
+    </div>
+</div>
+
+<div id="search-form-travelers-selection" class="collapse automation-searchFormTravelersSelection p-lg">
+        <p class="automation-selectOccupantsLabel">Select occupants of each room</p>
+        <div class="clearfix">
+            <div class="tab-content" aria-live="polite" role="tabpanel">
+                    <div id="room-1" class="form-horizontal room-card p automation-roomOccupancy1">
+    <h3 class="border-bottom h4">Room 1
+        <!---->
+    </h3>
+    <div class="grid-container p">
+        <label class="label" for="adult-1" id="adult-label-ember2522">
+            <span class="sr-only">1</span> Adults
+        </label>
+        <div class="grid-item">
+            <div id="ember2524" class="ember-view"><div class="number-stepper">
+    <button aria-labelledby="step-decrement-ember2524" aria-disabled="true" class="btn btn-default automation-number-stepper-minus-button disabled" data-ember-action="2525">
+        <i aria-hidden="true" class="icon icon-2x icon-product__remove--outline"></i>
+        <span class="sr-only" id="step-decrement-ember2524">Remove 1 Adults</span>
+    </button>
+        <input id="adult-1" disabled="" tabindex="-1" name="currentValue" size="3" type="text" aria-labelledby="adult-label-ember2522" aria-live="polite" class="automation-number-stepper-value text-strong ember-view ember-text-field automation-number-stepper-value text-strong">
+    <button aria-labelledby="step-increment-ember2524" aria-disabled="false" class="btn btn-default automation-number-stepper-plus-button " data-ember-action="2526">
+        <i aria-hidden="true" class="icon icon-2x icon-product__add--outline"></i>
+        <span class="sr-only" id="step-increment-ember2524">Add 1 Adults</span>
+    </button>
+</div>
+</div>
+        </div>
+    </div>
+
+    <div class="grid-container p-lg">
+        <label class="label" for="child-1" id="child-label-ember2522">
+            <span class="sr-only">0</span> Children
+                <span class="sr-only">This will add additional form fields to specify child ages.</span>
+        </label>
+        <div class="grid-item">
+            <div id="ember2527" class="ember-view"><div class="number-stepper">
+    <button aria-labelledby="step-decrement-ember2527" aria-disabled="true" class="btn btn-default automation-number-stepper-minus-button disabled" data-ember-action="2528">
+        <i aria-hidden="true" class="icon icon-2x icon-product__remove--outline"></i>
+        <span class="sr-only" id="step-decrement-ember2527">Remove 1 Children</span>
+    </button>
+        <input id="child-1" disabled="" tabindex="-1" name="currentValue" size="3" type="text" aria-labelledby="child-label-ember2522" aria-live="polite" class="automation-number-stepper-value text-strong ember-view ember-text-field automation-number-stepper-value text-strong">
+    <button aria-labelledby="step-increment-ember2527" aria-disabled="false" class="btn btn-default automation-number-stepper-plus-button " data-ember-action="2529">
+        <i aria-hidden="true" class="icon icon-2x icon-product__add--outline"></i>
+        <span class="sr-only" id="step-increment-ember2527">Add 1 Children</span>
+    </button>
+</div>
+</div>
+        </div>
+
+            <div class="child-ages-container">
+<!---->            </div>
+<!---->    </div>
+</div>
+
+
+                    <button id="addRoomsId" type="button" aria-controls="" aria-expanded="false" class="automation-AddAnotherRoom ember-view automation-AddAnotherRoom btn btn-default btn-sm">+ Add Another Room</button>
+            </div>
+        </div>
+</div>
+
+</form>
+
+            </div>
+                <div class="modal-footer">
+<!---->                    
+                        <button type="button" class="automation-searchModify ember-view automation-searchModify btn btn-primary">Search</button>
+                        <button type="button" class="automation-modalCloseBtn ember-view automation-modalCloseBtn btn btn-default">Close</button>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="policies-modal" class="ember-view"><div tabindex="-1" role="document" data-keyboard="true" data-backdrop="true" style="display: none;" class="modal fade  automation-dashCartPoliciesModal" aria-labelledby="policies-modal-label-header" aria-describedby="policy-body">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <button class="close automation-closeXBtn" data-ember-action="2543">
+                            <i aria-hidden="true" class="icon icon-modal--close"></i>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    <h1 class="modal-title h3 automation-modalTitle" id="policies-modal-label-header">
+                        Please note, most loyalty programmes cannot be used on a prepaid, third party booking.
+                    </h1>
+                </div>
+            <div class="modal-body automation-modalBody" id="policy-body">
+                    <!---->
+    <div class="tab-content" aria-live="polite">
+<!---->
+<!---->
+<!---->
+<!---->    </div>
+
+
+            </div>
+                <div class="modal-footer">
+<!---->                    
+                        <button type="button" class="automation-modalCloseBtn ember-view automation-modalCloseBtn btn btn-default">Close</button>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="ember2552" class="ember-view"><div id="removed-products-modal" class="ember-view"><div tabindex="-1" role="document" data-keyboard="true" data-backdrop="true" style="display: none;" class="modal fade  automation-removedProductsModal" aria-labelledby="removed-products-modal-header" aria-describedby="removed-products-modal-body">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <button class="close automation-closeXBtn automation-removedProductsModalXButton" data-ember-action="2553">
+                            <i aria-hidden="true" class="icon icon-modal--close"></i>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    <h1 class="modal-title h3 automation-modalTitle" id="removed-products-modal-header">
+                        Change Selection
+                    </h1>
+                </div>
+            <div class="modal-body automation-modalBody" id="removed-products-modal-body">
+                        <p>Your change is complete.  The following selections have been removed and will need to be selected again:</p>
+<!---->
+<!---->
+<!---->
+            </div>
+                <div class="modal-footer">
+<!---->                    
+                        <button type="button" class="automation-modalCloseBtn ember-view automation-modalCloseBtn btn btn-default">Close</button>
+                </div>
+        </div>
+    </div>
+</div>
+</div></div>
+
+</div>
+
+        <h1 style="color:darkblue" id="hotel-results-header" tabindex="-1">Hotel Results</h1>
+    </div>
+</div>
+
+<!---->
+<div class="page-body">
+<!---->
+            
+
+
+    <div id="search-results-form-container" class="main-contents-container col-sm-12">
+        
+
+<!---->
+<!---->
+            <ul class="products-list products-hotels media-list automation-hotelList ">
+
+                    <li id="ember2935" class="media product automation-hotelResult   " data-automation-connector-ordering="" data-automation-user-review="">
+<!---->
+<!---->
+    <div class="product-body flex-container">
+        <div class="col-xs-9 no-vertical-padding">
+            <div class="row">
+                <div class="col-xs-4 product-padding">
+                    <img id="ember2936" alt="The Modern Honolulu" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/80/a6/49/spa.jpg?w=900&h=-1&s=1" style="width:250px;height:200px">
+                </div>
+
+                <div class="media-body col-xs-8 product-padding">
+<!---->
+                    <h3 class="media-heading automation-hotelName">The Khyber Himalayan</h3>
+
+                    <div class="address product-info text-muted">
+                        <div>
+                            <!---->
+                        </div>
+                        <div>
+                            Hotel in Gulmarg
+                        </div>
+                    </div>
+
+                    <div id="ember2937" class="ember-view"><div class="clearfix">
+            <span class="sr-only">Rating 5 stars</span>
+            <div aria-hidden="true" class="pull-left rating product-info automation-hotelStarRating stars5">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+            </div>
+        </div>
+</div>
+
+                        <div class="trip-advisor">
+    <button type="button" class="automation-openUserReviewPopover align-self-start btn-link btn-block text-left" id="user-review-1xpr8f8jztb1i8td9q9" data-ember-action="2939">
+        
+        
+            Based on 851 reviews
+    </button>
+</div>
+<div>
+<div>
+                          The Khyber Himalayan Resort & Spa, Gulmarg. No Reservation Costs. Great Rates. Book at The Khyber Himalayan Resort & Spa, Gulmarg. Get Instant Confirmation. Best Price Guarantee. No Booking Fees. Low Rates. Special Offers. Great Availability.
+
+
+                        </div>
+                    </div>
+<!---->                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 price-container product-padding">
+            <div class="flex-container flex-col">
+                <div class="flex-grow">
+
+<!---->
+<!---->
+                        <div id="ember2940" class="ember-view"><!---->
+<!---->
+<!---->
+<!---->
+    <div class="price-info">
+                <div class="avg-per-night">
+                    Avg/night including tax
+                </div>
+
+<!---->            <div class="price automation-pricePerNight text-large text-strong">
+<!---->                        <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">27,907</span></span>
+
+            </div>
+    </div>
+
+    <div class="price-info">
+                <div>Total price from:</div>
+        <div class="price price-total automation-priceTotal">
+                    <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">27,907</span></span>
+
+        </div>
+    </div>
+
+<!---->
+   <br>
+
+    <div class="p">
+<!----><!---->    </div>
+</div>
+                </div>
+
+<!---->                        <a href="hotelbook/"><button type="button" class="automation-viewDetails btn-block ember-view automation-viewDetails btn-block btn btn-primary">Book Now <span class="sr-only">Pride Plaza</span></button></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-footer">
+            
+        </div>
+
+<!----></li>
+                    <li id="ember2860" class="media product automation-hotelResult   " data-automation-connector-ordering="" data-automation-user-review="">
+<!---->
+<!---->
+    <div class="product-body flex-container">
+        <div class="col-xs-12 no-vertical-padding">
+            <div class="row">
+                <div class="col-xs-4 product-padding">
+                    <img id="ember2861" alt="Radisson Blu Plaza Delhi Airport" src="https://pix10.agoda.net/hotelImages/2094068/-1/8d4ce71161125d5fb45154e12654aea9.jpg?s=1024x768" style="width:250px;height:200px">
+                </div>
+
+                <div class="media-body col-xs-8 product-padding">
+<!---->
+                    <h3 class="media-heading automation-hotelName">Radisson Blu Jammu</h3>
+
+                    <div class="address product-info text-muted">
+                        <div>
+			        Hotel in Jammu
+                        </div>
+                        
+                    </div>
+
+                    <div id="ember2868" class="ember-view"><div class="clearfix">
+            <span class="sr-only">Rating 5 stars</span>
+            <div aria-hidden="true" class="pull-left rating product-info automation-hotelStarRating stars5">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+            </div>
+        </div>
+	
+</div>
+
+                        <div class="trip-advisor">
+    <button type="button" class="automation-openUserReviewPopover align-self-start btn-link btn-block text-left" id="user-review-1n4a0srh22sn6wp0afr" data-ember-action="2876">
+        <span class="sr-only">Trip Advisor reviews 4 of 5</span>
+        
+            Based on 671 reviews
+    </button>
+</div>
+<div >
+                        <div>
+			        Radisson Blu Jammu features a restaurant, outdoor swimming pool, a fitness centre and bar in Jammu. Good ambience good staff good food.
+                        </div>
+                        
+                    </div>
+
+<!---->                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-4 price-container product-padding">
+            <div class="flex-container flex-col">
+                <div class="flex-grow">
+
+<!---->
+<!---->
+                        <div id="ember2883" class="ember-view"><!---->
+<!---->
+<!---->
+<!---->
+    <div class="price-info">
+                <div class="avg-per-night">
+                    Avg/night including tax
+                </div>
+
+<!---->            <div class="price automation-pricePerNight text-large text-strong">
+<!---->                        <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">2,500</span></span>
+
+            </div>
+    </div>
+
+    <div class="price-info">
+                <div>Total price from:</div>
+        <div class="price price-total automation-priceTotal">
+                    <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">2,500</span></span>
+
+        </div>
+    </div>
+
+<!---->
+    <br>
+
+    <div class="p">
+<!----><!---->    </div>
+</div>
+                </div>
+
+<!---->                        <a href="hotelbook/"><button type="button" class="automation-viewDetails btn-block ember-view automation-viewDetails btn-block btn btn-primary">Book Now <span class="sr-only">Pride Plaza</span></button></a>
+            </div>
+        </div>
+    </div>
+
+        
+
+<!----></li>
+
+                    <li id="ember2903" class="media product automation-hotelResult   " data-automation-connector-ordering="" data-automation-user-review="">
+<!---->
+<!---->
+    <div class="product-body flex-container">
+        <div class="col-xs-9 no-vertical-padding">
+            <div class="row">
+                <div class="col-xs-4 product-padding">
+                    <img id="ember2904" alt="Ibis Hotel" src="https://cf.bstatic.com/xdata/images/hotel/square200/231746462.webp?k=6f704a105caa7d3beb48ae934b85a8da4ed74e8e8c44ae2f6d359a7f2a32b57e&o=">
+                </div>
+
+                <div class="media-body col-xs-8 product-padding">
+                        <div class="product-deal-container p-sm">
+                                    
+                                                    </div>
+
+                    <h3 class="media-heading automation-hotelName">Viraj Sarovar Portico</h3>
+
+                    <div class="address product-info text-muted">
+                        <div>
+                            Hotel in Jammu
+                        </div>
+                        
+                    </div>
+
+                    <div id="ember2905" class="ember-view"><div class="clearfix">
+            <span class="sr-only">Rating 4 stars</span>
+            <div aria-hidden="true" class="pull-left rating product-info automation-hotelStarRating stars4">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+            </div>
+        </div>
+</div>
+
+                        <div class="trip-advisor">
+    <button type="button" class="automation-openUserReviewPopover align-self-start btn-link btn-block text-left" id="user-review-cmkblpaoegslm47by1" data-ember-action="2907">
+        <span class="sr-only">Trip Advisor reviews 4 of 5</span>
+        
+            Based on 1,627 reviews
+    </button>
+</div>
+<div>
+                        <div>
+                            
+Viraj Sarovar Portico features a restaurant, seasonal outdoor swimming pool, a fitness centre and bar in Jammu. Good staff and good food quality
+
+                        </div>
+                        
+                    </div>
+
+<!---->                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 price-container product-padding">
+            <div class="flex-container flex-col">
+                <div class="flex-grow">
+
+<!---->
+<!---->
+                        <div id="ember2908" class="ember-view">    <div class="product-deal rate-deal">
+<!---->            Discount
+    </div>
+
+<!---->
+<!---->
+<!---->
+    <div class="price-info">
+                <div class="avg-per-night">
+                    Avg/night including tax
+                </div>
+
+                <div class="price price-strikethrough">
+                    <span class="sr-only">Original Price</span>
+                            <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">3,800</span></span>
+
+                </div>
+            <div class="price automation-pricePerNight text-large text-strong">
+                    <span class="sr-only">Sale Price</span>
+                        <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">3,299</span></span>
+
+            </div>
+    </div>
+
+    <div class="price-info">
+                <div>Total price from:</div>
+        <div class="price price-total automation-priceTotal">
+                    <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">3,299</span></span>
+
+        </div>
+    </div>
+<br>
+<!---->
+    
+
+    <div class="p">
+<!----><!---->    </div>
+</div>
+                </div>
+
+<!---->                        <a href="hotelbook/"><button type="button" class="automation-viewDetails btn-block ember-view automation-viewDetails btn-block btn btn-primary">Book Now <span class="sr-only">Pride Plaza</span></button></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-footer">
+            
+        </div>
+
+<!----></li>
+
+                    <li id="ember2915" class="media product automation-hotelResult   " data-automation-connector-ordering="" data-automation-user-review="">
+<!---->
+<!---->
+    <div class="product-body flex-container">
+        <div class="col-xs-9 no-vertical-padding">
+            <div class="row">
+                <div class="col-xs-4 product-padding">
+                    <img id="ember2916" alt="Alohilani Resort Waikiki Beach - Demo" src="https://cf.bstatic.com/xdata/images/hotel/square200/70039332.webp?k=c55c2bdc6154bd1d2774c5e15410fa502b374c3cc0336a241c03b0c87625c6e5&o=">
+                </div>
+
+                <div class="media-body col-xs-8 product-padding">
+<!---->
+                    <h3 class="media-heading automation-hotelName">Le Roi Jammu</h3>
+
+                    <div class="address product-info text-muted">
+                        <div>
+                            Hotel in Jammu
+                        </div>
+                        
+                    </div>
+
+                    <div id="ember2917" class="ember-view"><div class="clearfix">
+            <span class="sr-only">Rating 3 stars</span>
+            <div aria-hidden="true" class="pull-left rating product-info automation-hotelStarRating stars3">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+            </div>
+        </div>
+</div>
+<div>
+                        <div>
+                            Le Roi Jammu is a 3-star property situated in Jammu. Among the facilities of this property are a restaurant, a 24-hour front desk and room service, along with free WiFi throughout the property. le Roi hotel is very good and best things is staff welldone
+
+
+                        </div>
+                        
+                    </div>
+<!---->
+<!---->                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 price-container product-padding">
+            <div class="flex-container flex-col">
+                <div class="flex-grow">
+
+<!---->
+<!---->
+                        <div id="ember2918" class="ember-view"><!---->
+<!---->
+<!---->
+<!---->
+    <div class="price-info">
+                <div class="avg-per-night">
+                    Avg/night including tax
+                </div>
+
+<!---->            <div class="price automation-pricePerNight text-large text-strong">
+<!---->                        <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">1,530</span></span>
+
+            </div>
+    </div>
+
+    <div class="price-info">
+                <div>Total price from:</div>
+        <div class="price price-total automation-priceTotal">
+                    <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">1,530</span></span>
+
+        </div>
+    </div>
+
+<!---->
+    <br>
+
+    <div class="p">
+<!----><!---->    </div>
+</div>
+                </div>
+
+<!---->                        <a href="hotelbook/"><button type="button" class="automation-viewDetails btn-block ember-view automation-viewDetails btn-block btn btn-primary">Book Now <span class="sr-only">Pride Plaza</span></button></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-footer">
+            
+        </div>
+
+<!----></li>
+
+                    <li id="ember2924" class="media product automation-hotelResult   " data-automation-connector-ordering="" data-automation-user-review="">
+<!---->
+<!---->
+    <div class="product-body flex-container">
+        <div class="col-xs-9 no-vertical-padding">
+            <div class="row">
+                <div class="col-xs-4 product-padding">
+                    <img id="ember2925" alt="Courtyard Waikiki Beach" src="https://cf.bstatic.com/xdata/images/hotel/square200/98944129.webp?k=72fad40ee48f0c882342e9495a72de8c609c130dd519016bb160241f4a58fd2e&o=">
+                </div>
+
+                <div class="media-body col-xs-8 product-padding">
+<!---->
+                    <h3 class="media-heading automation-hotelName">K C Residency</h3>
+
+                    <div class="address product-info text-muted">
+                        <div>
+                            Hotel in Jammu
+                        </div>
+                        
+                    </div>
+
+                    <div id="ember2926" class="ember-view"><div class="clearfix">
+            <span class="sr-only">Rating 4 stars</span>
+            <div aria-hidden="true" class="pull-left rating product-info automation-hotelStarRating stars4">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+            </div>
+        </div>
+</div>
+
+                        <div class="trip-advisor">
+    <button type="button" class="automation-openUserReviewPopover align-self-start btn-link btn-block text-left" id="user-review-751a2m1i3qa09b5920" data-ember-action="2928">
+        
+        
+            Based on 711 reviews
+    </button>
+</div>
+<div class="address product-info text-muted">
+                        <div>
+                            K.C. Residency offers accommodation in Jammu. Guests can enjoy the on-site restaurant. Free WiFi is provided and free private parking is available on site. The property was very clean. The rooms are good and comfortable and the staff is even more helpfull. They even allowed me late checkout by 2 hours without any additional cost. The breakfast was good as well and the revolving hotel on top really does give you a complete city view and a good dining experience.
+                        </div>
+                        
+                    </div>
+<!---->                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 price-container product-padding">
+            <div class="flex-container flex-col">
+                <div class="flex-grow">
+
+<!---->
+<!---->
+                        <div id="ember2929" class="ember-view"><!---->
+<!---->
+<!---->
+<!---->
+    <div class="price-info">
+                <div class="avg-per-night">
+                    Avg/night including tax
+                </div>
+
+<!---->            <div class="price automation-pricePerNight text-large text-strong">
+<!---->                        <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">3,000</span></span>
+
+            </div>
+    </div>
+
+    <div class="price-info">
+                <div>Total price from:</div>
+        <div class="price price-total automation-priceTotal">
+                    <span class="automation-priceCash"><span class="currency-symbol">₹</span><span class="currency-value">3,000</span></span>
+
+        </div>
+    </div>
+<br>
+<!---->
+    
+
+    <div class="p">
+<!----><!---->    </div>
+</div>
+                </div>
+
+<!---->                        <a href="hotelbook/"><button type="button" class="automation-viewDetails btn-block ember-view automation-viewDetails btn-block btn btn-primary">Book Now <span class="sr-only">Pride Plaza</span></button></a>
+            </div>
+        </div>
+    </div>
+
+        <div class="product-footer">
+            
+        </div>
+
+<!----></li>
+
+
+                    
+                    
+
+                    <li id="ember3000" class="media product automation-hotelResult   " data-automation-connector-ordering="" data-automation-user-review="">
+<!---->
+<!---->
+    
+    <div id="ember1612" class="ember-view"><!----></div>
+</main>
+  
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ember.js/2.18.2/ember.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-89c5a1da-f23d-b936-58ec-1e243bcce0d9" crossorigin=""></script>
+
+
+</body></html>

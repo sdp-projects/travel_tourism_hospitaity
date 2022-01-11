@@ -1,0 +1,321 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Flat Payment Modal</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  
+<style>
+body {
+  background: #f2f2f2;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  display: block;
+  max-width: 480px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.modal {
+  background: #FFF;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.modal .form .form-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0 0 30px;
+}
+.modal .form .form-row:last-child {
+  margin: 0;
+}
+.modal .form .form-row:last-child .input-group {
+  width: 75%;
+  margin: 0 15px 0 0;
+}
+.modal .form .form-row:last-child .input-group:last-child {
+  width: 25%;
+  margin: 0 0 0 15px;
+}
+.modal .form .input-group {
+  width: 100%;
+}
+.modal .form label {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  color: #00A6EA;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.modal .form input {
+  outline: none;
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
+  border: 0;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  padding: 15px;
+  color: #999;
+  font-size: 12px;
+  font-weight: 700;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.modal .header {
+  background: #00A6EA;
+  padding: 30px;
+  text-align: center;
+}
+.modal .header h1 {
+  margin: 0 0 15px;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.modal .header .card-type {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.modal .header .card-type .card {
+  position: relative;
+  width: 25%;
+  min-width: 54px;
+  text-align: center;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.modal .header .card-type .card.active {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.modal .header .card-type .card.active:after {
+  display: block;
+  bottom: -30px;
+}
+.modal .header .card-type .card:after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  margin: 0 0 0 -10px;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.modal .header .card-type .card img {
+  display: inline-block;
+}
+.modal .header .card-type li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.modal .content {
+  padding: 30px;
+}
+.modal .footer .button {
+  outline: none;
+  display: block;
+  background: #E39C14;
+  width: 100%;
+  border: 0;
+  padding: 20px 30px;
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.info {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+.info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #333;
+}
+.info span {
+  color: #666;
+  font-size: 12px;
+}
+.info span a {
+  color: #000;
+  text-decoration: none;
+}
+.info span .fa {
+  color: #00A6EA;
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
+@-moz-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
+@-o-keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
+@keyframes active{ 0%{ bottom: -60px; opacity: 0; } 100%{ bottom: -30px; opacity: 1 }}
+[not-existing] {
+  zoom: 1;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div class="container">
+  <div class="info">
+    <h1>Payment Card</h1>
+  </div>
+  <form class="modal">
+    <header class="header">
+      <h1>Enter Your Card Details</h1>
+      <div class="card-type">
+        <a class="card active" href="#">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Amex.png">
+        </a>
+        <a class="card" href="#">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Discover.png">
+        </a>
+        <a class="card" href="#">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Visa.png">
+        </a>
+        <a class="card" href="#">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/MC.png">
+        </a>
+      </div>
+    </header>
+    <div class="content">
+      <div class="form">
+        <div class="form-row">
+          <div class="input-group">
+            <label for="">Name on card</label>
+            <input placeholder="" type="text">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="">Card Number</label>
+            <input maxlength="16" placeholder="" type="number">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="">Expiry Date</label>
+            <input placeholder="" type="month">
+          </div>
+          <div class="input-group">
+            <label for="">CVS</label>
+            <input maxlenght="4" placeholder="" type="number">
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <button class="button">Complete Payment</button>
+    </footer>
+  </form>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://codepen.io/andytran/pen/yYMobm.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900|Material+Icons"><link rel="stylesheet" href="https://codepen.io/andytran/pen/da0415260bc83974687e3f9aebc6e186.css">
+      <script id="rendered-js">
+$('.card').on('click', function (e) {
+  e.preventDefault();
+  $('.card').removeClass('active');
+  $(this).addClass('active');
+  $('.form').stop().slideUp();
+  $('.form').delay(300).slideDown();
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>

@@ -1,0 +1,289 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>tours</title>
+  
+  
+  
+  
+<style>
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
+}
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <h1 class="main-title">Best places in Delhi</h1>
+
+<div class="container">
+  <h3 class="title">India Gate</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-india-gate.jpg">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">India Gate</h3>
+        <p class="content-text">India Gate is a magnificent stone arch built as a memorial to Indian soldiers killed in WWI. An eternal flame burns beneath the massive structure, and its walls are inscribed with the names of more than 90,000 soldiers who died in the conflict.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">The Lotus Temple</h3>
+  <div class="content">
+<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-lotus-temple.jpg">
+      <div class="content-details fadeIn-top">
+        <h3>The Lotus Temple</h3>
+        <p>The magnificent Bahá'í House of Worship, also known as the Lotus Temple due to its nine sides and stunning central dome, is an architectural masterpiece. Constructed of white concrete and marble, the entire structure looks as delicate as the flower it resembles. Rising from the surrounding nine pools of water, it almost appears as if it might burst into bloom at any moment.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">THe Red Fort</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-red-fort.jpg">
+      <div class="content-details fadeIn-left">
+        <h3>The Red Fort</h3>
+        <p>The beautiful Red Fort was built by Shah Jahan in 1648 and served as the seat of Mughal power until 1857. This stunning structure, with its tall, red sandstone walls covers an area of more than two square kilometers, the entirety of which is crescent shaped and surrounded by a moat. The impressive main entrance, the Lahore Gate, is so named as it faces towards Lahore in Pakistan, while the even grander Delhi Gate was used by the emperor for ceremonial processions.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Gurudwara Bangla Sahib</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-gurudwara-bangla-sahib.jpg">
+      <div class="content-details fadeIn-right">
+        <h3>Gurudwara Bangla Sahib</h3>
+        <p>Delhi's most important Sikh place of worship, the 18th-century Gurdwara Bangla Sahib is near Connaught Place and is well worth a visit. Highlights include its magnificent pool, the Sarovar, at the heart of this large complex, as well as its famous gold dome and flagpole.Visitors are always welcome here, and an excellent meal is available at no cost in the large Gurdwara Kitchen-all that is asked in return is your hair be covered and shoes removed.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Qutub Minar</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-qutub-minar.jpg">
+      <div class="content-details fadeIn-top fadeIn-left">
+        <h3>Qutub Minar</h3>
+        <p>Completed in the 12th century, the beautiful Qutub Minar-India's tallest minaret and now a UNESCO Word Heritage Site-attracts many international visitors eager to climb to the top for its breathtaking views of the surrounding area.
+This ornate five-story tower rises more than 70 meters and is covered with intricate carvings featuring the history of Qutub along with inscriptions from the Koran. It's also notable for being constructed of a number of different types of stone.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Akshardham</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-akshardham.jpg">
+      <div class="content-details fadeIn-top fadeIn-right">
+        <h3>Akshardham</h3>
+        <p>Although only recently completed (it opened in 2007), the splendid Hindu Akshardham temple looks like it could be centuries old. Festooned with intricate and elaborate carvings, this magnificent building attracts countless visitors for its majestic beauty.
+Highlights include the stunning 43-meter-high main monument with its rich carvings of animals, plants, gods, dancers, and musicians, all made from pink sandstone and marble. Of particular note are the 234 ornate pillars supporting its nine domes, as well as a stunning stone tribute to elephants, the centerpiece of which is a massive 3,000-ton statue of one of these beasts.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Humayun's Tomb</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-humayun's-tomb.jpg">
+      <div class="content-details fadeIn-bottom fadeIn-left">
+        <h3> Humayun's Tomb</h3>
+        <p>Set in a lovely, large square garden, Humayun's Tomb is a lofty mausoleum constructed of white marble and red sandstone. It was designed as a prototype of the Taj Mahal in Agra and is an excellent example of Mughal architecture. Built in the mid-16th century by Haji Begum as a memorial to her husband by Humayun's senior widow, the tomb is surrounded by lush formal gardens and other tombs including Humayun's barber and the Tomb of Isa Khan (the architect of the Taj Mahal), a fine example of Lodi architecture and octagonal in shape. A fun thing to do is to try and catch a glimpse of this spectacular structure after nightfall when it's illuminated.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="title">Jama Masjid</h3>
+  <div class="content">
+    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+      <div class="content-overlay"></div>
+      <img style="height:250px" class="content-image" src="https://www.planetware.com/photos-large/IND/india-delhi-jama-masjid.jpg">
+      <div class="content-details fadeIn-bottom fadeIn-right">
+        <h3>Jama Masjid</h3>
+        <p>The Jama Masjid is one of India's largest mosques and was the final architectural feat of Shah Jahan. Completed in 1658, this beautiful structure features three gateways, four angled towers, and two 40-meter-high minarets built using red sandstone and white marble and attractively alternated in vertical stripes. Visitors can climb to the top of the southern minaret for spectacular views of Old Delhi, and afterwards visit the large central pool used for washing before prayers (visitors must take off their shoes and be appropriately dressed before entering; non-Muslims aren't permitted during prayers).</p>
+      </div>
+    </a>
+  </div>
+</div>
+  
+  
+  
+  
+
+
+
+
+ 
+</body></html>

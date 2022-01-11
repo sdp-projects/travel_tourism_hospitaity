@@ -1,0 +1,264 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>Hotel Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+<style>
+.room {
+  padding: 50px 0;
+  border: 1px solid #ccc;
+  background: #efefef;
+}
+
+.showBookings button {
+  margin: 20px 0 20px 0;
+  /*  position: fixed;
+    top: 50%;
+    left: 87%;
+    z-index: 10;*/
+}
+
+.bookedRooms {
+  display: none;
+  margin-bottom: 50px;
+}
+
+.alert {
+  background: #28B34E;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+.alert p {
+  font-size: 2em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.overlay label {
+  margin-top: 200px;
+  color: #fff;
+  font-size: 2em;
+}
+.overlay label input {
+  color: #000;
+}
+.overlay label button {
+  margin-bottom: 7px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div class="container">
+  <div class="jumbotron text-center">
+    <h1>Hotel</h1>
+  </div>
+  <div class="row">
+
+    <!-- OVERLAY -->
+    <div class="overlay text-center">
+      <label for="renter">
+        Renter's Name:
+        <input type="text" id="renter">
+        <p>Room Number: <span id="roomNum"></span></p>
+        <button class="btn btn-primary btn-lg submit">Submit</button>
+      </label>
+    </div>
+
+    <!-- OPEN ROOMS -->
+    <section class="col-xs-12">
+      <div class="booker text-center">
+        <h3 class="text-muted">Available Rooms <span id="roomsAvailable"></span>
+        </h3>
+        <div id="rooms"><div class="room col-xs-12 col-md-6 col-md-4" id="0"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 2</p> <p> $200</p> <button class="btn btn-primary book">Book</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="1"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 2</p> <p> $400</p> <button class="btn btn-primary book">Book</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="2"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 1</p> <p> $100</p> <button class="btn btn-primary book">Book</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="4"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 1</p> <p> $150</p> <button class="btn btn-primary book">Book</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="6"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 1</p> <p> $100</p> <button class="btn btn-primary book">Book</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="7"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 2</p> <p> $550</p> <button class="btn btn-primary book">Book</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="8"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 2</p> <p> $400</p> <button class="btn btn-primary book">Book</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="9"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: 3</p> <p> $750</p> <button class="btn btn-primary book">Book</button> </div></div>
+      </div>
+      <div class="showBookings col-xs-12">
+        <button class="btn btn-warning pull-right">Booked Rooms</button>
+      </div>
+    </section>
+
+    <!-- BOOKED ROOMS -->
+    <section class="col-xs-12 bookedRooms">
+      <div class="text-center">
+        <h3 class="text-muted">Booked Rooms <span id="roomsBooked"></span></h3>
+        <div id="takenRooms"><div class="room col-xs-12 col-md-6 col-md-4" id="3"> <p> <img class="img-thumbnail" src="https://prahandhuschwedding.files.wordpress.com/2015/03/hotelroom.jpg"> </p> <p> Renter: Josh</p><p> Beds: 1</p> <p> $150</p> <button class="btn btn-primary cancel">Cancel</button> </div><div class="room col-xs-12 col-md-6 col-md-4" id="5"> <p> <img class="img-thumbnail" src="https://prahandhuschwedding.files.wordpress.com/2015/03/hotelroom.jpg"> </p> <p> Renter: Britny</p><p> Beds: 3</p> <p> $850</p> <button class="btn btn-primary cancel">Cancel</button> </div></div>
+      </div>
+    </section>
+
+  </div>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script id="rendered-js">
+$(document).ready(function () {
+
+  //number of rooms
+  var rooms = [];
+  var roomsEmpty = [];
+  var roomsBooked = [];
+
+  //new room constructor
+  function Room(beds, status, price, name) {
+    this.name = name;
+    this.beds = beds;
+    this.status = status;
+    this.price = price;
+  }
+
+  //create the rooms
+  rooms.push(new Room(2, "available", 200));
+  rooms.push(new Room(2, "available", 400));
+  rooms.push(new Room(1, "available", 100));
+  rooms.push(new Room(1, "booked", 150, "Josh"));
+  rooms.push(new Room(1, "available", 150));
+  rooms.push(new Room(3, "booked", 850, "Britny"));
+  rooms.push(new Room(1, "available", 100));
+  rooms.push(new Room(2, "available", 550));
+  rooms.push(new Room(2, "available", 400));
+  rooms.push(new Room(3, "available", 750));
+  //10 total rooms
+  var roomLength = rooms.length;
+
+
+  //SETTING UP INITIAL DOM *********
+
+  //add available rooms to DOM
+  function showRooms() {
+    $('#rooms').html("");
+    $('#takenRooms').html("");
+    var x;
+    for (x = 0; x < roomLength; x++) {if (window.CP.shouldStopExecution(0)) break;
+      //if the room is available
+      if (rooms[x].status == "available") {
+        //create element
+        var e = $('<div class="room col-xs-12 col-md-6 col-md-4"> <p> <img class="img-thumbnail" src="https://palacestation.sclv.com/~/media/Images/Page%20Background%20Images/Palace/Hotel/PS_Hotel_KingRoom_new.jpg"> </p> <p> Beds: ' + rooms[x].beds + '</p> <p> $' + rooms[x].price + '</p> <button class="btn btn-primary book">Book</button> </div>');
+        //add the id
+        e.attr('id', x);
+        //append to DOM
+        $('#rooms').append(e);
+      } else {
+        //create element
+        var a = $('<div class="room col-xs-12 col-md-6 col-md-4"> <p> <img class="img-thumbnail" src="https://prahandhuschwedding.files.wordpress.com/2015/03/hotelroom.jpg"> </p> <p> Renter: ' + rooms[x].name + '<p> Beds: ' + rooms[x].beds + '</p> <p> $' + rooms[x].price + '</p> <button class="btn btn-primary cancel">Cancel</button> </div>');
+        //add the id
+        a.attr('id', x);
+        //append to DOM
+        $('#takenRooms').append(a);
+        roomsBooked.push(rooms[x]);
+      }
+    }window.CP.exitedLoop(0);
+  }
+  showRooms();
+
+
+
+
+  //BOOK A ROOM *********
+
+  //When a book button is clicked
+  $('#rooms').on('click', '.book', function () {
+    var roomNum = $(this).closest(".room").attr('id');
+    $('.overlay').fadeIn();
+    $('#roomNum').text(roomNum);
+    return roomNum;
+  });
+
+  //when the overlay submit button is clicked
+  $('.overlay').on('click', '.submit', function () {
+    var roomNum = $('#roomNum').text();
+    var name = $('#renter').val();
+    rooms[roomNum].status = "booked";
+    rooms[roomNum].name = name;
+    $('.overlay').fadeOut("slow");
+    showRooms();
+    var alert = '<div class="alert bg-success"> <p>OK ' + name + ', you\'re room was booked!</p></div>';
+    $('.container').append(alert).fadeIn("slow");
+    setTimeout(function () {
+      $('.alert').fadeOut("slow");
+      $('#renter').val("");
+      $('#roomNum').text("");
+    }, 2000);
+  });
+
+
+  //CANCEL A ROOM ******
+
+  //when cancel button is clicked
+  $('.bookedRooms').on('click', '.cancel', function () {
+    //get index of this room in ROOMS array
+    var roomNum = $(this).closest(".room").attr('id');
+    //remove this room from BOOKED array
+    roomsBooked.splice(roomNum, 1);
+    //change status of this room
+    rooms[roomNum].status = "available";
+    //add it to EMPTY array
+    roomsEmpty.push(rooms[roomNum]);
+    //update DOM
+    showRooms();
+  });
+
+
+  //UI INTERACTION ******
+
+  //show booked rooms when button is clicked
+  $('.showBookings button').click(function () {
+    $('.bookedRooms').fadeToggle("slow");
+    var buttonText = $(".showBookings button").html();
+    if (buttonText == 'Booked Rooms') {
+      $(".showBookings button").html('Hide');
+    } else {
+      $(".showBookings button").html('Show Booked Rooms');
+    }
+  });
+
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>

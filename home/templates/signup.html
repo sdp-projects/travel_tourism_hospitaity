@@ -1,0 +1,59 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Signin/Signup</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'><link rel="stylesheet" href="{% static 'signup/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<p><br><br></p>
+<div class="cont">
+  <div class="form sign-in">
+    {% load crispy_forms_tags %}
+	  <form method="POST" action="login">
+        <center><h1>Welcome back!</h1></center><br><br>
+        {% csrf_token %}
+		{{ login_form|crispy }}
+        <br><br>
+		<button type="submit" style="background:black; text:black">Login</button>
+	  </form>
+
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    </div>
+    <div class="form sign-up">
+      {% load crispy_forms_tags %}
+	  <form method="POST">
+        <center><h2>Time to feel like home</h2></center><br>
+        {% csrf_token %}
+		{{ register_form|crispy }}
+        <br><br>
+		<button type="submit" style="background:black; text:black">Register</button>
+	  </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- partial -->
+  <script  src="{% static 'signup/script.js' %}"></script>
+
+</body>
+</html>

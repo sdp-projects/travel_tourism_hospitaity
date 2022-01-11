@@ -1,0 +1,608 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Take A Trip</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'home/css/bootstrap.css' %}" rel="stylesheet">
+
+        <!-- Add custom CSS here -->
+        <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'home/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+
+        <!-- Side Menu -->
+        <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </li>
+                <li class="sidebar-brand">
+                    <a href="/">Take A Trip</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="#top">Home</a>
+                </li>
+                <li>
+                    <a href="#services1">SignUp/SignIn</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#places">Places</a>
+                </li>
+                <li>
+                    <a href="/gallery">Gallery</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /Side Menu -->
+
+        <!-- Full Page Image Header Area -->
+        <div id="top" class="header">
+            <div class="vert-text parallax">
+                <h3 class="header-text">
+                </h3><br /><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br>
+                <br/>
+                <a href="#services1"><img src="{% static 'home/img/direction.png' %}" class="space" alt="Direction"></a>
+            </div>
+        </div>
+        <!-- /Full Page Image Header Area -->
+
+        <!-- Intro -->
+        <div id="services1" class="services1">
+            <div class="light-wrapper">
+                <div class="container inner">
+                    <div class="row">
+                        <div class="text-center">
+                            <h2 class="main-title">Get Started</h2>
+                            <hr>
+                            <h1 class="main-title"><center>We Wander For Distraction, But We Travel For Fulfilment</center></h1><br>
+                            <h2 class="main-title"><center>Let's get Started</center></h2><br>
+                          <center><h1 style="font-family:Georgia, serif">Create An Account/Have  An  Account</h1></center><br>
+                          <center><h1 style="font-family:Georgia, serif"><a href="signup/"> <button class="button button3" style="background-color: #FF0000 ;border: none; color: white; padding: 20px 80px; text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;border-radius: 8px">SignUp/SignIn</button></a></h1></center>
+                        </div>
+                      </div>
+                            
+                          </div>
+                      <!-- /.row --> 
+                      
+                    </div>
+                    <!-- /.container --> 
+                  </div>
+                  <!-- /.light-wrapper -->
+                </div>
+        <!-- /Intro -->
+
+        
+        <!-- Services -->
+        <div id="services" class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <h2 class="main-title">Our Services</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="divide50"></div>
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <div class="service-item">
+                            <i class="service-icon fa fa-plane"></i>
+                            <h4 class="service-title">Great Transport</h4>
+                            <p class="service-desc">Take A Trip provides the best and cheapest means of transport for travelling accross different places in India.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="service-item">
+                            <i class="service-icon fa fa-usd"></i>
+                            <h4 class="service-title">Not Expensive</h4>
+                            <p class="service-desc">In Take A Trip Website, we provide you the best prices available, So you can plan your trip in your budget.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="service-item">
+                            <i class="service-icon fa fa-cutlery"></i>
+                            <h4 class="service-title">Delicious Food</h4>
+                            <p class="service-desc">We suggest personalized food suggestions to you based on your choices and interests.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="service-item">
+                            <i class="service-icon fa fa-camera"></i>
+                            <h4 class="service-title">Agents</h4>
+                            <p class="service-desc">We provide tour guide to guide your journey and security guard to protect your belongings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Services -->
+        <!-- Callout -->
+        <div class="callout">
+            <div class="vert-text">
+                <h1 class="main-title parallax2">Your Travellers Guide</h1>
+            </div>
+        </div>
+        <!-- /Callout -->
+        
+        <!-- Portfolio -->
+        <div id="places" class="places">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <h2 class="main-title">Our visited place</h2>
+                        <hr>
+                    </div>
+                </div>
+            </div>  
+            <div class="divide50"></div>  
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="grid center-block">
+                            <figure class="effect-zoe">
+                                <img src="{% static 'home/img/paris.jpg' %}" alt="paris" class="img-responsive center-block">
+                                <figcaption>
+                                    <h2>Delhi</h2>
+                                    <p class="icon-links">
+                                        <a href="blogdelhi/"><i class="fa fa-eye"></i></a>
+                                    </p>
+                                    <p class="description">
+                                        Delhi, India’s capital territory, is a massive metropolitan area in the country’s north.
+                                    </p>
+                                </figcaption>           
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="grid center-block">
+                            <figure class="effect-zoe">
+                                <img src="{% static 'home/img/london.jpg' %}" alt="london" class="img-responsive center-block">
+                                <figcaption>
+                                    <h2>Bangalore</h2>
+                                    <p class="icon-links">
+                                        <a href="blogbangalore/"><i class="fa fa-eye"></i></a>
+                                    </p>
+
+                                    <p class="description">
+                                        Bengaluru (also called Bangalore) is the capital of India's southern Karnataka state. The center of India's high-tech industry, the city is also known for its parks and nightlife.
+                                    </p>
+                                </figcaption>           
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class= "row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="grid center-block">
+                            <figure class="effect-zoe">
+                                <img src="{% static 'home/img/washington.jpg' %}" alt="washington" class="img-responsive center-block">
+                                <figcaption>
+                                    <h2>Hyderabad</h2>
+
+                                    <p class="description">
+                                        Hyderabad is the capital of southern India's Telangana state. A major center for the technology industry, it's home to many upscale restaurants and shops.
+                                    </p>
+                                </figcaption>           
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="grid center-block">
+                            <figure class="effect-zoe">
+                                <img src="{% static 'home/img/sydney.jpg' %}" alt="sydney" class="img-responsive center-block">
+                                <figcaption>
+                                    <h2>Mumbai</h2>
+
+                                    <p class="description">
+                                        Mumbai (formerly called Bombay) is a densely populated city on India’s west coast.
+                                    </p>
+                                </figcaption>           
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="grid center-block">
+                            <figure class="effect-zoe">
+                                <img src="{% static 'home/img/statue_of_liberty.jfif' %}" alt="statue_of_liberty" class="img-responsive center-block">
+                                <figcaption>
+                                    <h2>Pune</h2>
+
+                                    <p class="description">
+                                        Pune is a sprawling city in the western Indian state of Maharashtra. It was once the base of the Peshwas (prime ministers) of the Maratha Empire, which lasted from 1674 to 1818.
+                                    </p>
+                                </figcaption>           
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="grid center-block">
+                            <figure class="effect-zoe">
+                                <img src="{% static 'home/img/pizza_tower.jpg' %}" alt="pizza_tower" class="img-responsive center-block">
+                                <figcaption>
+                                    <h2>Chennai</h2>
+                                    <p class="icon-links">
+                                        <a href="#"><i class="fa fa-eye"></i></a>
+                                    </p>
+                                    <p class="description">
+                                        Chennai, on the Bay of Bengal in eastern India, is the capital of the state of Tamil Nadu.
+                                    </p>
+                                </figcaption>           
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Portfolio -->
+
+        <!-- Call to Action -->
+        <div class="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h3>We provide online booking</h3>
+                        <a href="signup/" class="btn booking-btn text-center" data-toggle="modal">Click for Booking !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Call to Action -->
+<div id="about">
+            <div class="light-wrapper">
+                <div class="container inner">
+                    <div class="row">
+                        <div class="text-center">
+                            <h2 class="main-title">About our company</h2>
+                            <hr>
+                        </div>
+                        <div class="divide50"></div>
+                        <div class="col-sm-4">
+                          <figure><img src="{% static 'home/img/office.jpg' %}" alt="" style="width: 100%;"></figure>
+                        </div>
+                        <div class="col-sm-8">
+                          <h4>Our Working Place</h4>
+                          <p>Our's is a positive working environment which promotes employee safety, growth and goal attainment. These environments are most conducive to a successful workforce as they encourage employees to perform to their highest ability. We achieve positive working environment by focusing on their overall culture, supporting employee growth and making employees feel safe and comfortable.</p>
+                        </div>
+                      </div>
+                      <div class="divide50"></div>
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <h4>Our Journeys</h4><hr>
+                          <p>We travel to all cities and states in India. Some of our journeys include</p>
+                          <div class="divide5"></div>
+                          <ul class="progress-list">
+                            <li>
+                              <p>Mumbai <em>90%</em></p>
+                              <div class="progress plain">
+                                <div class="bar" style="width: 90%;"></div>
+                              </div>
+                            </li>
+                            <li>
+                              <p>Delhi <em>80%</em></p>
+                              <div class="progress plain">
+                                <div class="bar" style="width: 80%;"></div>
+                              </div>
+                            </li>
+                            <li>
+                              <p>Hyderabad <em>85%</em></p>
+                              <div class="progress plain">
+                                <div class="bar" style="width: 85%;"></div>
+                              </div>
+                            </li>
+                            <li>
+                              <p>Bangalore <em>50%</em></p>
+                              <div class="progress plain">
+                                <div class="bar" style="width: 50%;"></div>
+                              </div>
+                            </li>
+                          </ul>
+                          <!-- /.progress-list --> 
+                        </div>
+                        <!-- /.col -->
+                        
+                        <div class="col-sm-4">
+                          <h4>Why Choose Us?</h4><hr>
+                          <p>We provide a complete guide for your journeys. Clients also choose us </p>
+                          <div class="divide10"></div>
+                          <ol class="color">
+                            <li>Because we’ll make you more money </li>
+                            <li>Because we know digital.</li>
+                            <li>Because we’ll understand your brand. </li>
+                            <li>Because we’re easy to work with. </li>
+                            <li>Because we focus on results.</li>
+                            <li>Because we provide best security.</li>
+                          </ol>
+                        </div>
+                        <!-- /.col -->
+                        
+                        <div class="col-sm-4">
+                          <h4>Our Transports</h4><hr>
+                          <div class="divide10"></div>
+                          <div class="services-2">
+                            <div class="icon"> <img src="{% static 'home/img/icon-web.png' %}" data-src="style/images/icons/icon-web.png" data-ret="style/images/icons/icon-web@2x.png" class="retina" alt="" /> </div>
+                            <!-- /.icon -->
+                            <div class="text">
+                              <h5>Responsive Layout</h5>
+                            </div>
+                            <!-- /.text -->
+                            <div class="divide20"></div>
+                            <div class="icon"> <img src="{% static 'home/img/icon-heart.png' %}" data-src="style/images/icons/icon-heart.png" data-ret="style/images/icons/icon-heart@2x.png" class="retina" alt="" /> </div>
+                            <!-- /.icon -->
+                            <div class="text">
+                              <h5>Flat & Clean design</h5>
+                            </div>
+                            <!-- /.text -->
+                            <div class="divide20"></div>
+                            <div class="icon"> <img src="{% static 'home/img/icon-print.png' %}" data-src="style/images/icons/icon-print.png" data-ret="style/images/icons/icon-print@2x.png" class="retina" alt="" /> </div>
+                            <!-- /.icon -->
+                            <div class="text">
+                              <h5>Compare Prices</h5>
+                            </div>
+                            <!-- /.text --> 
+                            
+                          </div>
+                          <!-- /.services-2 --> 
+                          
+                        </div>
+                        <!-- /.col --> 
+                        
+                      </div>
+                      <!-- /.row --> 
+                      <br><br><Br>
+<center><h2>Our Team</h2></center>
+<br>
+
+<div class="row">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>N S P Priyanka</h2>
+        <p class="title">Group Member</p>
+        <p>priyanka@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>G G Sanjana</h2>
+        <p class="title">Group Leader</p>
+        <p>sanjana@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>V S S Lasya</h2>
+        <p class="title">Group Member</p>
+        <p>lasya@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>  
+                      
+                    </div>
+                    <!-- /.container --> 
+                  </div>
+                  <!-- /.light-wrapper -->
+                </div>
+        <!-- Contact Section -->
+        <div id="contact" class="container parallax">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <h2 class="main-title">Contact us</h2>
+                <hr>
+                <div class="divide50"></div>
+            </div>
+            <!-- Contact Inner -->
+            <div class="inner contact">
+                <!-- Form Area -->
+                <div class="contact-form">
+                    <!-- Form -->
+                    <form id="contact-us" method="post" action="message/">
+                        {% csrf_token %}
+                        <!-- Left Inputs -->
+                        <div class="col-xs-6 col-xs-12 animated" data-animation="fadeInLeft" data-animation-delay="300">
+                            <!-- Name -->
+                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                            <!-- Email -->
+                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                            <!-- Subject -->
+                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                        </div><!-- End Left Inputs -->
+                        <!-- Right Inputs -->
+                        <div class="col-xs-6 col-xs-12 animated" data-animation="fadeInRight" data-animation-delay="400">
+                            <!-- Message -->
+                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                        </div><!-- End Right Inputs -->
+                        <!-- Bottom Submit -->
+                        <div class="relative fullwidth col-xs-12">
+                            <!-- Send Button -->
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
+                        </div><!-- End Bottom Submit -->
+                        <!-- Clear -->
+                        <div class="clear"></div>
+                    </form>
+
+                    <!-- Your Mail Message -->
+                    <div class="mail-message-area">
+                        <!-- Message -->
+                        <div class="alert gray-bg mail-message not-visible-message">
+                            <strong>Thank You !</strong> Your email has been delivered.
+                        </div>
+                    </div>
+
+                </div><!-- End Contact Form Area -->
+            </div><!-- End Inner -->
+        </div><!-- End Contact Section -->
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <ul class="list-inline">
+                            <li>
+                                <i href="https://www.facebook.com/" class="fa fa-facebook"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-twitter"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-dribbble"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-pinterest"></i>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="top-scroll">
+                            <a href="#top"><i class="fa fa-arrow-circle-up scroll"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /Footer -->
+
+
+        <!-- JavaScript -->
+        <script src="{% static 'home/js/jquery-1.10.2.js' %}"></script>
+        <script src="{% static 'home/js/bootstrap.js' %}"></script>
+        <script type="text/javascript" src="{% static 'home/js/jquery.parallax-1.1.3.js' %}"></script>
+
+        <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+        <script>
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        </script>
+        <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        </script>
+        <script>
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        </script>
+
+        <!-- modal -->
+
+        <script>
+
+            $('.modal').on('shown.bs.modal', function () {
+                var curModal = this;
+                $('.modal').each(function(){
+                    if(this != curModal){
+                        $(this).modal('hide');
+                    }
+                });
+            });
+
+        </script>
+
+    </body>
+</html>
