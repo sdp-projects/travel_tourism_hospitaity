@@ -24,7 +24,7 @@ SECRET_KEY = 'xvdn9=oix!)l!j(&d_cs$-^qbhir8x9a&6)x6gh$1rzo0z)rs4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [travel-tourism-hospitaity.onrender.com]
 
 # Application definition
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +119,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  # or another template pack you are using
