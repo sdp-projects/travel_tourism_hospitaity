@@ -30,7 +30,6 @@ The platform aims to simplify trip planning with strong backend management, secu
 - **Figma Prototype:** Designed a prototype to conceptualize the platform and refine the user interface.
 - We created a **[Figma Prototype](https://www.figma.com/design/FahPiGlTBc7KsShKlagmXM/Take-a-Trip---Prototype)** to visualize the user interface and layout of the platform. This design provides an early look at the functionality and flow of the website before development. Feel free to explore it to get a better idea of how the project came to life!  
 - **Blog Publication:** Documented the project in a LinkedIn blog post highlighting its features and technical implementation. 
-For detailed insights into the project, including user research findings, field study results, and the full development process, check out our blog post where we cover the entire field study in the process of creating **Take a Trip**:
-- **[Take a Trip: Field Study – Blog Post on LinkedIn](https://www.linkedin.com/posts/sanjana--garimella_kluniversity-klcse-activity-6766830065876660224-k3sy?utm_source=share&utm_medium=member_desktop)**
+For detailed insights into the project, including user research findings, field study results, and the full development process, check out our blog post where we cover the entire field study in the process of creating **[Take a Trip: Field Study – Blog Post on LinkedIn](https://www.linkedin.com/posts/sanjana--garimella_kluniversity-klcse-activity-6766830065876660224-k3sy?utm_source=share&utm_medium=member_desktop)**
 
 
