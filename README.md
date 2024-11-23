@@ -50,11 +50,4 @@ The platform aims to simplify trip planning with strong backend management, secu
 ## 🌐 Live Website
 - Check out the live version of **Take a Trip** platform by visiting:  
   **[Visit Take a Trip](https://travel-tourism-hospitaity.onrender.com/)**  
-  *(Replace with your actual website URL)*
 
----
-
-## 📦 Installation and Setup
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/take-a-trip.git
