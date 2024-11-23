@@ -9,7 +9,6 @@ Take a Trip is a comprehensive travel, tourism, and hospitality management platf
 - **Travel Guide:** Curated recommendations for top destinations and attractions.  
 - **Payment Gateway:** Secure and efficient payment options for seamless transactions.  
 - **Travel Support Bot:** Personal assistance powered by data science, providing personalized travel recommendations.  
-- **Mathematical Programming:** Enabled to suggest the best and most cost-effective travel solutions.  
 
 ## Objective
 To create an efficient and user-friendly travel planning platform using:
@@ -24,14 +23,14 @@ The platform aims to simplify trip planning with strong backend management, secu
 - **HTML/CSS/JavaScript:** Responsive and user-friendly interface design.
 - **Mathematical Programming:** Providing the best and most cost-effective travel solutions.
 - **Data Science:** Supporting a travel bot for personalized assistance.
-- **Figma Design:** Designed an interactive prototype of the platform using Figma to visualize the user interface and features before implementation.
-Figma design Link - [link](https://www.figma.com/design/FahPiGlTBc7KsShKlagmXM/Take-a-Trip---Prototype)
+
 
 ## Achievements
 - **Project Recognition:** Selected as one of the best projects in college.
-- **Team Leadership:** Successfully led a team to complete the project under challenging circumstances, demonstrating adaptability and perseverance.
-- **AWS Deployment:** Successfully deployed the platform on AWS, ensuring high availability and scalability.
-- **Figma Prototype:** Designed a prototype to conceptualize the platform and refine the user interface.  
-- **Blog Publication:** Documented the project in a LinkedIn blog post highlighting its features and technical implementation. Read the blog [here](https://www.linkedin.com/posts/sanjana--garimella_kluniversity-klcse-activity-6766830065876660224-k3sy?utm_source=share&utm_medium=member_desktop).
+- **Figma Prototype:** Designed a prototype to conceptualize the platform and refine the user interface.
+- We created a **[Figma prototype](https://www.figma.com/design/FahPiGlTBc7KsShKlagmXM/Take-a-Trip---Prototype)** to visualize the user interface and layout of the platform. This design provides an early look at the functionality and flow of the website before development. Feel free to explore it to get a better idea of how the project came to life!  
+- **Blog Publication:** Documented the project in a LinkedIn blog post highlighting its features and technical implementation. 
+For detailed insights into the project, including user research findings, field study results, and the full development process, check out our blog post where we cover the entire field study in the process of creating **Take a Trip**:
+- **[Take a Trip: Travel Planning Simplified – Blog Post on LinkedIn](https://www.linkedin.com/posts/sanjana--garimella_kluniversity-klcse-activity-6766830065876660224-k3sy?utm_source=share&utm_medium=member_desktop)**
 
 
